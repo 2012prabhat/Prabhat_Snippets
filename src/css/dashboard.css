@@ -1,0 +1,400 @@
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+.mainCont{
+    /* border: 1px solid red; */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.snippetsCont{
+    height: 100%;
+    background: #353b48;
+    width: 25%;
+}
+
+.snippetsCont .searchCont{
+    margin-top: 2%;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 7%;
+}
+
+.snippetsCont .searchCont input{
+    margin-right: 5%;
+    width: 75%;
+    height: 70%;
+    outline: none;
+    border-radius: 0.3em;
+    border: none;
+    padding: 0 1em;
+}
+
+.snippetsCont .searchCont i{
+    cursor: pointer;
+    color: white;
+    font-size: 1.5em;
+}
+
+.snippetsCont .snippets{
+    margin-top: 3%;
+    height: 90%;
+    /* border: 1px solid black; */
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+
+.snippetsCont .snippets::-webkit-scrollbar{
+    display: none;
+    width: 0;
+}
+
+
+.snippetsCont .snippets .snip{
+    padding: 1em 1em;
+    color: white;
+    transition: all 0.2s;
+    display: flex;
+    width: 90%;
+
+    /* margin-top: 1em; */
+}
+
+
+.snippetsCont .snippets .snipCont:hover{
+    background: #494a4d;
+    cursor: pointer;
+}
+
+.snippetsCont .snippets .snipCont.selected{
+    background: #494a4d;
+}
+.snipCont{
+display: flex;
+align-items: center;
+color: white;
+cursor: pointer;
+
+}
+
+.snippetsCont .snippets .snip i{
+    margin-right: 0.5em;
+    color: #c7ecee;
+}
+
+
+.codeEditorCont{
+    height: 100%;
+    width: 75%;
+    /* margin-left: 2%; */
+    /* margin-top: 5%; */
+    /* border: 3px solid black; */
+    /* padding: 3% 3%; */
+    position: relative;
+    background: #272822;
+}
+
+.logOutBtn{
+    position: absolute;
+    right: 5%;
+    top: 3%;
+    font-size: 1.9em;
+    cursor: pointer;
+    transition: all 0.5s;
+    color: white;
+}
+.copyBtn{
+    position: absolute;
+    color: white;
+    font-size: 2em;
+    left: 45%;
+    top: 3%;
+    cursor: pointer;
+    transition: all 0.5s;
+
+}
+
+.updateBtn{
+    position: absolute;
+    left: 5%;
+    top: 3%;
+    font-size: 1.9em;
+    cursor: pointer;
+    transition: all 0.5s;
+    color: white;
+}
+
+
+.logOutBtn:hover{
+    color: red;
+    transform: scale(1.2)
+}
+
+.updateBtn:hover{
+    color: rgb(37, 237, 37);
+    transform: scale(1.2)
+
+}
+
+.copyBtn:hover{
+color: #d6d573;
+transform: scale(1.2)
+
+}
+
+
+#code-editor{
+    margin-top: 10%;
+    height: 90%;
+    /* margin-left: 2.5%; */
+    border-radius: 0.8em;
+}
+
+
+.ace_gutter,.ace_layer.ace_print-margin-layer{
+    display: none !important;
+}
+
+.ace_scrollbar.ace_scrollbar-h,.ace_scrollbar.ace_scrollbar-v{
+    display: none !important;
+}
+
+
+.errCard{
+    position: absolute;
+    top: 2%;
+    width: 40%;
+    /* margin-left: 40%; */
+    color: white;
+    padding: 1%;
+    text-align: center;
+    left:30%;
+    right: 0;
+    font-size: 1.5em;
+    border-radius: 0.2em;
+    animation: fadeIn 0.5s;
+}
+
+.errCard.error{
+    background: indianred;
+}
+
+.errCard.success{
+    background: #2ecc71;
+
+}
+
+
+.addCodeCont{
+    height: 100%;
+    width: 75%;
+    left: 25%;
+    position: fixed;
+    background: #272822;
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: 2;
+    /* display: none; */
+}
+
+
+.addModuleBtn{
+    font-size:2em;
+    color: white;
+    position: absolute;
+    bottom: 5%;
+    right: 3%;
+    cursor: pointer;
+    transition: all 0.5s;
+    z-index: 3;
+
+}
+
+.deleteBtn{
+    font-size:1.5em;
+    color: white;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.addCodeCont form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* margin-top: 10%; */
+    height: 100%;
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: center;
+}
+
+.addCodeCont form input{
+    width: 80%;
+    outline: none;
+    height:7%;
+    font-size: 1em;
+    background:black;
+    color: white;
+    border: none;
+    padding: 1%;
+}
+
+.addCodeCont form textarea{
+    width: 80%;
+    height: 70%;
+    resize: none;
+    outline: none;
+    border: none;
+    font-size: 1em;
+    background:black;
+    color: white;
+    padding: 1%;
+
+}
+
+.addCodeCont button{
+    background: white;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 2%;
+    padding: 1% 5%;
+    border-radius: 2em;
+}
+
+
+.loggedInText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    width: 100vw;
+    background: #95a5a6;
+}
+.loggedInText div{
+    font-size: 3em;
+    color: rgba(0, 0, 0, 0.664);
+    /* background: #2980b9; */
+    padding: 1%;
+    font-family: cursive;
+
+}
+.loggedInText a{
+    padding: 1% 3%;
+    font-size: 2em;
+    background: rgba(0, 0, 0, 0.664);
+    text-decoration: none;
+    color: white;
+    margin-top: 2%;
+    border-radius: 0.2em;
+}
+
+
+.prompt{
+    background: rgba(236, 240, 241,0.4);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s;
+}
+
+.prompt .card{
+    margin-left: 20%;
+    height: 30%;
+    width: 40%;
+    background: #272822;
+    border-radius: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    user-select: none;
+}
+
+.prompt .card .text{
+    color: white;
+    font-size: 1.4em;
+    margin-bottom: 2%;
+}
+
+.prompt .card .buttonCont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+
+.prompt .card .buttonCont button{
+    width: 20%;
+    margin-right: 3%;
+    margin-left: 3%;
+    cursor: pointer;
+    padding:0.4em  0.2em;
+    outline: none;
+    border: none;
+    border-radius: 0.2em;
+}
+
+.prompt .card .buttonCont button:nth-child(1){
+    background:green;
+    color: white;
+}
+.prompt .card .buttonCont button:nth-child(2){
+    background:indianred;
+    color: white;
+}
+
+
+.loaderCont{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:#272822;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .loader-spinner {
+    border: 8px solid whiteSmoke;
+    border-top: 8px solid orangered;
+    border-radius: 50%;
+    width: 9vw;
+    height: 9vw;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .disName{
+    padding: 0 0.5em;
+  }

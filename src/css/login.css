@@ -1,0 +1,106 @@
+:root {
+    --col1: #2c3e50;
+    --col2: #f0f0f0;
+  }
+.loginCont{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+.loginCont .loginLeft{
+    height: 100%;
+    width: 50%;
+    background: var(--col1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loginCont .loginLeft img{
+    max-height: 98%;
+    max-width: 98%;
+}
+
+.loginCont .loginRight{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.loginCont .loginRight .input-field{
+    /* border-radius: 20%; */
+    background: var(--col2);
+    width: 50%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+    border-radius: 80px;
+    padding: 5px;
+}
+
+.loginCont .loginRight .input-field input{
+    background: none;
+    margin-left: 5%;
+    width: 75%;
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.loginCont .loginRight .input-field i{
+    margin-left: 5%;
+    color: grey;
+}
+.loginCont .loginRight .appName{
+    line-height: 1;
+    font-weight: 600;
+    font-size: 3em;
+    color: #333;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 7%;
+    color: var(--col1);
+    font-family: cursive;
+}
+
+.loginCont .loginRight .loginBtn{
+    margin-top: 5%;
+    background: var(--col1);
+    color: white;
+    /* width: 20%; */
+    font-size: 1.5em;
+    padding: 1% 4%;
+    border-radius: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.loginCont .loginRight .signupTag{
+    margin-top: 3%;
+}
+
+.loginCont .loginRight .signupTag a{
+    text-decoration: none;
+    color: orangered;
+}
+
+
+@media screen and (max-width:700px) {
+    .loginCont{
+        flex-direction: column;
+    }
+    .loginCont .loginLeft{
+        width: 100%;
+        height: 30%;
+    }
+    .loginCont .loginRight{
+        width: 100%;
+        height: 50%;
+    }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import todoBack from "../images/todoBack.png";
-import { getAuth,signInWithEmailAndPassword} from 'firebase/auth';
+import { signInWithEmailAndPassword} from 'firebase/auth';
 import { auth} from "./Firebase"
 import { useNavigate } from 'react-router-dom';
 import { showErrorCard } from "../App";

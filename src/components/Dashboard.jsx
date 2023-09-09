@@ -3,16 +3,14 @@ import Loader from './Loader';
 import AceEditor from 'react-ace';
 import 'ace-builds/src-noconflict/mode-javascript';
 import 'ace-builds/src-noconflict/theme-monokai'; 
-import { auth, firestore, storage } from "./Firebase";
+import { auth, firestore} from "./Firebase";
 import { useNavigate } from "react-router-dom";
-import { signOut, updateProfile } from "firebase/auth";
-import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { signOut } from "firebase/auth";
+// import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 
 import {
-  getFirestore,
   collection,
-  onSnapshot,
   addDoc,
   deleteDoc,
   updateDoc,

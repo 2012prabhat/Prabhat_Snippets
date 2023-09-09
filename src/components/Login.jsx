@@ -34,7 +34,7 @@ function Login() {
       </div>
       <form className="loginRight" onSubmit={(e)=>handleLogin(e)}>
         <div className="appName">
-        PrabhatSnippets
+        PrabhatSnipp
         </div>
         <div class="input-field">
           <i class="fas fa-user" aria-hidden="true"></i>
